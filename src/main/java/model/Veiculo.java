@@ -12,6 +12,7 @@ public class Veiculo {
     }
 
     public Veiculo (String tipo, String modelo, String cor, String placa) {
+        this.tipo = tipo;
         this.modelo = modelo;
         this.cor = cor;
         this.placa = placa;

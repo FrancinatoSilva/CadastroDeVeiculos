@@ -1,7 +1,10 @@
 package controller;
 
+import model.Veiculo;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 
 public class ControleDeFluxo {
 
@@ -26,7 +29,7 @@ public class ControleDeFluxo {
 
                 switch (opcao) {
                     case 1:
-
+                        Funcoes.opcao1();
                         break;
                     case 2:
 
@@ -38,7 +41,8 @@ public class ControleDeFluxo {
 
                         break;
                     case 5:
-
+                        System.out.println("Encerrando aplicação...");
+                        continuar = false;
                         break;
 
                     default:
