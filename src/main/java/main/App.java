@@ -12,10 +12,6 @@ public class App {
         ControleDeFluxo.exibirMenu();
         System.out.println();
 
-
-
-
-
         sc.close();
     }
 }

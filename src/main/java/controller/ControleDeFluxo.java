@@ -1,7 +1,5 @@
 package controller;
 
-import model.Veiculo;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -10,9 +8,9 @@ public class ControleDeFluxo {
 
     public static void exibirMenu() {
         Scanner sc = new Scanner(System.in);
-        boolean continuar = true;
+        int opcao = 0;
 
-        while (continuar) {
+        do {
             System.out.println("-Opções disponíveis");
             System.out.println("1. Cadastrar veículo e motorista");
             System.out.println("2. Listar veículos e motoristas cadastrados");
@@ -23,26 +21,26 @@ public class ControleDeFluxo {
             try {
                 System.out.println();
                 System.out.print("Informe o número referente à opção desejada: ");
-                int opcao = sc.nextInt();
+                opcao = sc.nextInt();
                 sc.nextLine();
                 System.out.println();
 
                 switch (opcao) {
                     case 1:
-                        Funcoes.opcao1();
+                        Funcoes.cadastro();
                         break;
                     case 2:
-
+                        Funcoes.listarCadastrados();
                         break;
                     case 3:
-
+                        //implementar depois
                         break;
                     case 4:
-
+                        //implementar depois
                         break;
                     case 5:
                         System.out.println("Encerrando aplicação...");
-                        continuar = false;
+
                         break;
 
                     default:
@@ -56,7 +54,7 @@ public class ControleDeFluxo {
             } catch (Exception e) {
                 System.out.println("ERRO INESPERADO: " + e.getMessage());
             }
-        }
+        } while (opcao != 5);
 
         sc.close();
 
