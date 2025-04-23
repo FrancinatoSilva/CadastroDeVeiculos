@@ -11,8 +11,8 @@ public class Visitante extends Motorista{
     }
 
     public Visitante(String nome, String cpf, String cnh, Integer idVisitante,
-                     String residenciaVisitada, String autorizadoPor) {
-        super(nome, cpf, cnh);
+                     String residenciaVisitada, String autorizadoPor, String status) {
+        super(nome, cpf, cnh, status);
         this.idVisitante = idVisitante;
         this.residenciaVisitada = residenciaVisitada;
         this.autorizadoPor = autorizadoPor;

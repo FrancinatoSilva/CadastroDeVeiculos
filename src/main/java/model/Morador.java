@@ -10,8 +10,8 @@ public class Morador extends Motorista{
     }
 
     public Morador(String nome, String cpf, String cnh, Integer idMorador,
-                     String residencia) {
-        super(nome, cpf, cnh);
+                     String residencia, String status) {
+        super(nome, cpf, cnh, status);
         this.idMorador = idMorador;
         this.residencia = residencia;
     }

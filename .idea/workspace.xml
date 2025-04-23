@@ -7,6 +7,9 @@
     <list default="true" id="a735d2a4-2b67-4753-b3ed-64cd2edb2a7d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Funcoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Funcoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Morador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Morador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Motorista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Motorista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Visitante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Visitante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

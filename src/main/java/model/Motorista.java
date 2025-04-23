@@ -5,15 +5,17 @@ public class Motorista {
     private String nome;
     private String cpf;
     private String cnh;
+    private String status;
 
     public Motorista() {
 
     }
 
-    public Motorista(String nome, String cpf, String cnh) {
+    public Motorista(String nome, String cpf, String cnh, String status) {
         this.nome = nome;
         this.cpf = cpf;
         this.cnh = cnh;
+        this.status = status;
     }
 
     public String getNome() {
@@ -38,5 +40,13 @@ public class Motorista {
 
     public void setCnh(String cnh) {
         this.cnh = cnh;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

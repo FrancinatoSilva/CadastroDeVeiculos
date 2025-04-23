@@ -68,7 +68,9 @@ public class Funcoes {
                 System.out.print("Residência: ");
                 String residencia = sc.nextLine();
 
-                Motorista novoMotorista = new Morador(nome, cpf, cnh, idMorador, residencia);
+                String status = statusMotorista;
+
+                Motorista novoMotorista = new Morador(nome, cpf, cnh, idMorador, residencia, status);
                 motoristas.add(novoMotorista);
 
                 System.out.print("Motorista cadastrado com sucesso!");
@@ -97,7 +99,10 @@ public class Funcoes {
                 System.out.print("Autorizado por: ");
                 String autorizadoPor = sc.nextLine();
 
-                Motorista novoMotorista = new Visitante(nome, cpf, cnh, idVisitante, residenciaVisitada, autorizadoPor);
+                String status = statusMotorista;
+
+                Motorista novoMotorista = new Visitante(nome, cpf, cnh, idVisitante, residenciaVisitada, autorizadoPor,
+                        status);
                 motoristas.add(novoMotorista);
 
                 System.out.println("Visitante cadastrado com sucesso!");
@@ -111,18 +116,40 @@ public class Funcoes {
     }
 
     public static void listarCadastrados() {
-        if (veiculos.isEmpty()) {
-            System.out.println("Nenhum veículo cadastrado ainda. \n");
+        if (veiculos.isEmpty() || motoristas.isEmpty()) {
+            System.out.println("Nenhum veículo/motorista cadastrado ainda. \n");
             return;
         }
 
-        System.out.println("=== Veículos Cadastrados ===");
+        System.out.println("=== Veículos/Motoristas Cadastrados ===");
         for (Veiculo v : veiculos) {
             System.out.println("Tipo: " + v.getTipo());
             System.out.println("Modelo: " + v.getModelo());
             System.out.println("Cor: " + v.getCor());
             System.out.println("Placa " + v.getPlaca());
             System.out.println("-------------------------");
+
+            for (Motorista motorista : motoristas) {
+                if (motorista.getStatus().equalsIgnoreCase("morador")) {
+                    Morador morador = (Morador) motorista;
+
+                    System.out.println("Nome: " + motorista.getNome());
+                    System.out.println("CPF: " + motorista.getCpf());
+                    System.out.println("CNH: " + motorista.getCnh());
+                    System.out.println("ID do morador: " + ((Morador) motorista).getIdMorador());
+                    System.out.println("Residência: " + ((Morador) motorista).getResidencia());
+
+                } else if (motorista.getStatus().equalsIgnoreCase("visitante")) {
+                    Visitante visitante = (Visitante) motorista;
+
+                    System.out.println("Nome: " + motorista.getNome());
+                    System.out.println("CPF: " + motorista.getCpf());
+                    System.out.println("CNH: " + motorista.getCnh());
+                    System.out.println("Residência visitada: " + ((Visitante) visitante).getResidenciaVisitada());
+                    System.out.println("Autorizado por: " + ((Visitante) visitante).getAutorizadoPor());
+
+                }
+            }
         }
         System.out.println();
     }
