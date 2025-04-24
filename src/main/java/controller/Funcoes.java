@@ -122,35 +122,40 @@ public class Funcoes {
         }
 
         System.out.println("=== Veículos/Motoristas Cadastrados ===");
-        for (Veiculo v : veiculos) {
+
+        int tamanho = Math.min(veiculos.size(), motoristas.size());
+
+        for (int i = 0; i < tamanho; i++) {
+            Veiculo v = veiculos.get(i);
+            Motorista motorista = motoristas.get(i);
+
+            System.out.println("=== Veículo ===");
             System.out.println("Tipo: " + v.getTipo());
             System.out.println("Modelo: " + v.getModelo());
             System.out.println("Cor: " + v.getCor());
-            System.out.println("Placa " + v.getPlaca());
-            System.out.println("-------------------------");
+            System.out.println("Placa: " + v.getPlaca());
 
-            for (Motorista motorista : motoristas) {
-                if (motorista.getStatus().equalsIgnoreCase("morador")) {
-                    Morador morador = (Morador) motorista;
+            System.out.println("=== Motorista ===");
+            System.out.println("Nome: " + motorista.getNome());
+            System.out.println("CPF: " + motorista.getCpf());
+            System.out.println("CNH: " + motorista.getCnh());
 
-                    System.out.println("Nome: " + motorista.getNome());
-                    System.out.println("CPF: " + motorista.getCpf());
-                    System.out.println("CNH: " + motorista.getCnh());
-                    System.out.println("ID do morador: " + ((Morador) motorista).getIdMorador());
-                    System.out.println("Residência: " + ((Morador) motorista).getResidencia());
-
-                } else if (motorista.getStatus().equalsIgnoreCase("visitante")) {
-                    Visitante visitante = (Visitante) motorista;
-
-                    System.out.println("Nome: " + motorista.getNome());
-                    System.out.println("CPF: " + motorista.getCpf());
-                    System.out.println("CNH: " + motorista.getCnh());
-                    System.out.println("Residência visitada: " + ((Visitante) visitante).getResidenciaVisitada());
-                    System.out.println("Autorizado por: " + ((Visitante) visitante).getAutorizadoPor());
-
-                }
+            if (motorista.getStatus().equalsIgnoreCase("morador")) {
+                Morador morador = (Morador) motorista;
+                System.out.println("ID do morador: " + morador.getIdMorador());
+                System.out.println("Residência: " + morador.getResidencia());
+            } else if (motorista.getStatus().equalsIgnoreCase("visitante")) {
+                Visitante visitante = (Visitante) motorista;
+                System.out.println("Residência visitada: " + visitante.getResidenciaVisitada());
+                System.out.println("Autorizado por: " + visitante.getAutorizadoPor());
             }
+
+            System.out.println("-------------------------");
         }
         System.out.println();
+    }
+
+    public static void editarDados() {
+
     }
 }
