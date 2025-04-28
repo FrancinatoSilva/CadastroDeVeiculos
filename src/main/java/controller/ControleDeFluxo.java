@@ -36,7 +36,6 @@ public class ControleDeFluxo {
                         break;
                     case 4:
                         System.out.println("Encerrando aplicação...");
-
                         break;
 
                     default:
@@ -50,7 +49,7 @@ public class ControleDeFluxo {
             } catch (Exception e) {
                 System.out.println("ERRO INESPERADO: " + e.getMessage());
             }
-        } while (opcao != 5);
+        } while (opcao != 4);
 
         sc.close();
 

@@ -13,9 +13,9 @@ public class Funcoes {
 
     private static List<Veiculo> veiculos = new ArrayList<>();
     private static List<Motorista> motoristas = new ArrayList<>();
+    private static Scanner sc = new Scanner (System.in);
 
     public static void cadastro() {
-        Scanner sc = new Scanner(System.in);
 
         while (true) {
             System.out.print("Qual tipo de veículo você deseja cadastrar (carro/moto): ");
@@ -155,7 +155,18 @@ public class Funcoes {
         System.out.println();
     }
 
-    public static void editarDados() {
+    public static void deletarCadastro() {
+        System.out.print("Você deseja remover um veículo ou um motorista: ");
+        String opcaoDesejada = sc.nextLine();
 
+        if (opcaoDesejada.equalsIgnoreCase("veiculo")) {
+
+
+        } else if (opcaoDesejada.equalsIgnoreCase("motorista")) {
+            //Implementar depois
+
+        } else {
+            System.out.println("Opção inválida! ");
+        }
     }
 }

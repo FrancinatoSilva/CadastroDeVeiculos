@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a735d2a4-2b67-4753-b3ed-64cd2edb2a7d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ControleDeFluxo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ControleDeFluxo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Funcoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Funcoes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +42,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ireno/Documents/Projetos Java/estudosEmJava",
+    "last_opened_file_path": "C:/Users/ireno/Documents/Projetos Java/CadastroDeVeiculos",
     "onboarding.tips.debug.path": "C:/Users/ireno/Documents/Projetos Java/CadastroDeVeiculos/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
