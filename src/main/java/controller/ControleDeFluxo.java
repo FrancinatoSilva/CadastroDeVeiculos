@@ -14,9 +14,8 @@ public class ControleDeFluxo {
             System.out.println("-Opções disponíveis");
             System.out.println("1. Cadastrar veículo e motorista");
             System.out.println("2. Listar veículos e motoristas cadastrados");
-            System.out.println("3. Editar dados cadastrados");
-            System.out.println("4. deletar cadastro");
-            System.out.println("5. Encerrar aplicação");
+            System.out.println("3. deletar cadastro");
+            System.out.println("4. Encerrar aplicação");
 
             try {
                 System.out.println();
@@ -36,9 +35,6 @@ public class ControleDeFluxo {
                         //implementar depois
                         break;
                     case 4:
-                        //implementar depois
-                        break;
-                    case 5:
                         System.out.println("Encerrando aplicação...");
 
                         break;
